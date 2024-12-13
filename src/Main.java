@@ -1,23 +1,22 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-class Main{
+public class Main {
     public static void main(String[] args) {
 
-        int[][] arr = new int[][] {
-                {16,26,36,41,43},
-                {17,27,37,47},
-                {18,28,38,48,58},
-                {19,29,39,49},
-                {20,30,40,50,60}
+        int[][] arr = new int[][]{
+                {16, 26, 36, 41, 43},
+                {17, 27, 37, 47},
+                {18, 28, 38, 48, 58},
+                {19, 29, 39, 49},
+                {20, 30, 40, 50, 60}
         };
 
         int rowStart = 0;
-        int rowEnd = arr.length-1;
+        int rowEnd = arr.length - 1;
         int[] rows = createRows(arr.length);
         int column = 0;
-        for (int row: rows) {
+        for (int row : rows) {
             int[] cols = createRows(arr[row].length);
-            for (int col: cols) {
+            for (int col : cols) {
                 System.out.print(Arrays.toString(searchIndex(arr, arr[row][col], rowStart, rowEnd, column, arr.length, 0)) + "\t\t");
             }
             System.out.println();
