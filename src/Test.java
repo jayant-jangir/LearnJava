@@ -2,15 +2,15 @@ import java.util.Arrays;
 
 class Test {
     public static void main(String[] args) {
-        int[] arr = {6, 7, 8, 9, 1, 2, 3, 4, 5};
+        int[] arr = {6, 0, 8, 7, 1, 2, 3, 4, 5};
 //        bubble(arr);
 //        selection(arr);
-        cycle(arr);
+//        cycle(arr);
+        System.out.println(missing(arr));;
         System.out.println(Arrays.toString(arr));
     }
     
     static void cycle(int[] arr) {
-        int isMissingFound = 0;
         for (int i = 0; i < arr.length; ) {
             int correctIndex = arr[i] - 1;
 
@@ -18,6 +18,23 @@ class Test {
                 swap(arr, correctIndex, i);
             else ++i;
         }
+
+    }
+
+    static int missing(int[] arr) {
+        for (int i = 0; i < arr.length; ) {
+            int correctIndex = arr[i];
+
+            if (correctIndex < arr.length && correctIndex != i)
+                swap(arr, correctIndex, i);
+            else ++i;
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != i) return i;
+        }
+
+        return arr.length;
 
     }
 
