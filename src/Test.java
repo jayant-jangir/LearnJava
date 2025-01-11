@@ -9,7 +9,8 @@ class Test {
         System.out.println(missing(arr));;
         System.out.println(Arrays.toString(arr));
     }
-    
+
+    // Cycle sort
     static void cycle(int[] arr) {
         for (int i = 0; i < arr.length; ) {
             int correctIndex = arr[i] - 1;
@@ -18,9 +19,9 @@ class Test {
                 swap(arr, correctIndex, i);
             else ++i;
         }
-
     }
 
+    // In case of continuous numbers, fine missing element
     static int missing(int[] arr) {
         for (int i = 0; i < arr.length; ) {
             int correctIndex = arr[i];
@@ -38,6 +39,7 @@ class Test {
 
     }
 
+    // Selection sort
     static void selection(int[] arr) {
         for (int i = 0; i < arr.length-1; i++) {
             int maxPos = findMax(arr, i, arr.length);
@@ -45,6 +47,7 @@ class Test {
         }
     }
 
+    // Insertion sort
     static void insertion(int[] arr) {
         for (int i=1; i< arr.length; i++) {
             int j = i;
@@ -67,6 +70,7 @@ class Test {
         return maxPos;
     }
 
+    // Bubble sort
     static void bubble(int[] arr) {
         boolean isSwap;
         for (int i = 0; i < arr.length; i++) {
@@ -81,6 +85,7 @@ class Test {
         }
     }
 
+    // Swap elements
     static void swap (int[] arr, int p, int q) {
         int temp = arr[p];
         arr[p] = arr[q];
