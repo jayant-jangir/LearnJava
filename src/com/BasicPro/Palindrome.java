@@ -1,6 +1,7 @@
+package com.BasicPro;
 public class Palindrome {
     public static void main(String[] args) {
-//        String str = "A man, a plan, a canal: Panama";
+//        String str = "CarMakeCompany man, a plan, a canal: Panama";
         String str = "0P";
         System.out.println(isPalindrome (str));
 

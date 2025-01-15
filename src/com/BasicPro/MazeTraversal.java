@@ -1,3 +1,4 @@
+package com.BasicPro;
 import java.util.Arrays;
 
 public class MazeTraversal {
