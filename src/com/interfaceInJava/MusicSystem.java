@@ -1,7 +1,6 @@
 package com.interfaceInJava;
 
-public interface Engine {
-
+public interface MusicSystem {
     void start();
     void stop();
 }
