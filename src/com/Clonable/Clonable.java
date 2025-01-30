@@ -32,7 +32,6 @@ public class Clonable implements Cloneable{
         // Deep copy
         copy.marks = new ArrayList<>(this.marks);
         return copy;
-
     }
 
     public static void main(String[] args) throws CloneNotSupportedException {
